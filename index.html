@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cookify - Recipe Book</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link href="./styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Cookify</div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-links">
+                <li><a href="#" data-page="home">Home</a></li>
+                <li><a href="#" data-page="about">About</a></li>
+                <li><a href="#" data-page="recipes">Recipes</a></li>
+                <li><a href="#" data-page="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <div class="hero">
+            <div>
+                <h1>Discover Your Next Favorite Dish</h1>
+                <p>A curated collection of recipes from around the world, tested and loved by home cooks everywhere</p>
+                <a href="#" class="btn" data-page="recipes">Browse Recipes</a>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">Featured This Week</h2>
+            <div class="featured-recipes">
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div class="container">
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>Cookify began as a simple notebook filled with handwritten recipes passed down through generations. What started in a small family kitchen has grown into a community of food lovers sharing their culinary adventures.</p>
+                
+                <p>We believe cooking should be accessible, enjoyable, and rewarding. Every recipe in our collection has been carefully tested and refined to ensure your success in the kitchen, whether you're a beginner or an experienced home cook.</p>
+                
+                <p>Our mission is to inspire you to create delicious meals, explore new flavors, and make lasting memories around the dinner table.</p>
+
+                <div class="values">
+                    <div class="value-card">
+                        <div class="value-icon">🌿</div>
+                        <h3>Fresh Ingredients</h3>
+                        <p>We celebrate seasonal produce and quality ingredients</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">👨‍👩‍👧‍👦</div>
+                        <h3>Community</h3>
+                        <p>Recipes shared by home cooks, for home cooks</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">📖</div>
+                        <h3>Authenticity</h3>
+                        <p>Real recipes that work in real kitchens</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recipes Page -->
+    <div id="recipes" class="page">
+        <div class="container">
+            <h2 style="margin-bottom: 2rem; color: var(--primary);">All Recipes</h2>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search recipes...">
+            </div>
+
+            <div class="recipe-grid" id="recipeGrid">
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have a recipe to share? Questions about our collection? We'd love to hear from you!</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span>📧</span>
+                            <a href="https://wa.me/+2348167175343" target="_blank"> 
+                                <strong>WhatsAapp</strong><br>
+                                +2348167175343
+                            </a>
+                         
+                        </div>
+                        <a href="tel:+2347056639840" class="contact-item">
+                            <span>📱</span>
+                            <div>
+                                <strong>Phone</strong><br>
+                                +2347056639840
+                            </div>
+                        </a>
+                        <a  href="https://maps.app.goo.gl/RjCeHmA9M5HtZXav5" target="_blank" class="contact-item">
+                            <span>📍</span>
+                            <div>
+                                <strong>Location</strong><br>
+                                Funaab, Ogun State, Nigeria.
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error" id="nameError">Please enter your name</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error" id="emailError">Please enter a valid email</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <span class="error" id="messageError">Please enter a message</span>
+                    </div>
+
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cookify. Made with ❤️ and fresh ingredients.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+
+    
+</body>
+</html>
